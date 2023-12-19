@@ -13,7 +13,7 @@ public class MainHub {
     public static DcMotor left_motor = null;
     public static DcMotor right_motor = null;
 
-    public static RevRoboticsCoreHexMotor hex_motor = null;
+    public static RevRoboticsCoreHexMotor core_motor = null;
 
     static Servo servo = null;
 
@@ -28,7 +28,7 @@ public class MainHub {
         hwMap = ahwMap;
         left_motor = ahwMap.get(DcMotor.class, "left_motor");
         right_motor = ahwMap.get(DcMotor.class, "right_motor");
-        hex_motor = ahwMap.get(RevRoboticsCoreHexMotor.class, "hex_motor");
+        core_motor = ahwMap.get(RevRoboticsCoreHexMotor.class, "core_motor");
         servo = ahwMap.get(Servo.class, "servo");
 
         left_motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
